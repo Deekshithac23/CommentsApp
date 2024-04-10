@@ -12,12 +12,12 @@ const CommentItem = props => {
     : 'https://assets.ccbp.in/frontend/react-js/comments-app/like-img.png'
   const postedTime = formatDistanceToNow(date)
 
-  onClickLike = () => {
+  const onClickLike = () => {
     const {toggleIsLiked} = props
     toggleIsLiked(id)
   }
 
-  onDeleteComment = () => {
+  const onDeleteComment = () => {
     const {deleteComment} = props
     deleteComment(id)
   }
