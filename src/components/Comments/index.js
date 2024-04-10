@@ -67,9 +67,9 @@ class Comments extends Component {
   }
 
   renderCommentsList = () => {
-    const {commentList} = this.state
+    const {commentsList} = this.state
 
-    return commentList.map(eachComment => (
+    return commentsList.map(eachComment => (
       <CommentItem
         key={eachComment.id}
         commentDetails={eachComment}
@@ -88,7 +88,7 @@ class Comments extends Component {
   }
 
   render() {
-    const {nameInput, commentInput, commentList} = this.state
+    const {nameInput, commentInput, commentsList} = this.state
 
     return (
       <div className="app-container">
@@ -125,7 +125,7 @@ class Comments extends Component {
           </div>
           <hr className="line" />
           <p className="head">
-            <span className="comments-count">{commentList.length} </span>
+            <span className="comments-count">{commentsList.length} </span>
             Comments
           </p>
           <ul className="comments-list"> {this.renderCommentsList()} </ul>
